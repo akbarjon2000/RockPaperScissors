@@ -11,13 +11,27 @@
 </head>
 
 <body>
-    <h1>Rock Paper Scissors</h1>
+    <div>
+
+        <h1>Rock Paper Scissors</h1>
+    </div>
     <div class="container">
 
         <div class="screen1" id="screen1">
             <img src="./icons/OIP.jpg" alt="" class="image">
             <button class="button">PLAY WITH OTHER</button>
-            <button class="button compBtn" onclick={playWithComp()}>PLAY WITH COMPUTER</button>
+            <audio src="./assets/audios/button.mp3" id="btnaudio"></audio>
+            <audio src="./assets/audios/wind.mp3" id="spinner"></audio>
+            <audio src="./assets/audios/timer.mp3" id="timer"></audio>
+            <audio src="./assets/audios/win2.mp3" id="win"></audio>
+            <audio src="./assets/audios/lost.mp3" id="lost"></audio>
+            <audio src="./assets/audios/rock.m4a" id="rock"></audio>
+            <audio src="./assets/audios/scissors.m4a" id="scissors"></audio>
+            <audio src="./assets/audios/paper.m4a" id="paper"></audio>
+            <!-- <audio id="btnaudio">
+                <source src="./assets/audios/button.mp3" type="audio/mpeg">
+            </audio> -->
+            <button class="button compBtn" onclick='playWithComp()'>PLAY WITH COMPUTER</button>
             <a class="instructions" href="d:/workplace/RockPaperScissors/README.md">See the instructions?</a>
         </div>
         <div class="screen2" id="screen2">
@@ -42,6 +56,7 @@
                 </div>
             </div>
             <div id="questionnare">
+                <h2 id="userInterface" class="jello-horizontal">You Choose First</h2>
                 <div class="questionnare">
                     <div style="display: flex; flex-direction: column; align-items: center;">
                         <img src="./assets/images/question-mark.png" alt="" id="user" num='3'>
@@ -56,12 +71,22 @@ letter-spacing: 0em;
 text-align: left;
 color: #C9D1D3;
 ">VS</p>
-                    <div style="display: flex; flex-direction: column; align-items: center;">
+                    <div style="display: flex; flex-direction: column; align-items: center;" class="jello-horizontal">
                         <img src="./assets/images/question-mark.png" alt="" id="comp">
                         <p style="margin: 0; color: #B4B1B1; font-size: 32px;">Computer</p>
                     </div>
                 </div>
-                <button id="startBtn" onclick={startGame()}>Start</button>
+                <div>
+                    <button id="startBtn" onclick={startGame()}>Start</button>
+                    <button id="refreshBtn" onclick={refreshGame()}>Refresh</button>
+
+                </div>
+            </div>
+            <div id="history">
+                <h2>Game History</h2>
+                <ol id="list">
+
+                </ol>
             </div>
         </div>
 
