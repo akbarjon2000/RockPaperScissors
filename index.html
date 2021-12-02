@@ -12,6 +12,61 @@
 
 <body>
     <h1>Rock Paper Scissors</h1>
+    <div class="container">
+
+        <div class="screen1" id="screen1">
+            <img src="./icons/OIP.jpg" alt="" class="image">
+            <button class="button">PLAY WITH OTHER</button>
+            <button class="button compBtn" onclick={playWithComp()}>PLAY WITH COMPUTER</button>
+            <a class="instructions" href="d:/workplace/RockPaperScissors/README.md">See the instructions?</a>
+        </div>
+        <div class="screen2" id="screen2">
+            <div id="images">
+                <div
+                    style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 90px;">
+                    <img src="./assets/images/leadership.png" alt="" id="image " style="width: 80px;"
+                        onclick={RocksisClicked()}>
+                    <p>Rock</p>
+                </div>
+                <div
+                    style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 90px;">
+                    <img src="./assets/images/hand.png" alt="" id="image" style="width: 80px;"
+                        onclick={HandisClicked()}>
+                    <p>Paper</p>
+                </div>
+                <div
+                    style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 90px;">
+                    <img src="./assets/images/scissors.png" alt="" id="image" style="width: 80px;"
+                        onclick={ScissorsisClicked()}>
+                    <p>Scissors</p>
+                </div>
+            </div>
+            <div id="questionnare">
+                <div class="questionnare">
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <img src="./assets/images/question-mark.png" alt="" id="user" num='3'>
+                        <p style="margin: 0; color: #B4B1B1; font-size: 32px;">You</p>
+                    </div>
+                    <p style="font-family: Roboto;
+font-size: 100px;
+font-style: normal;
+font-weight: 700;
+line-height: 117px;
+letter-spacing: 0em;
+text-align: left;
+color: #C9D1D3;
+">VS</p>
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <img src="./assets/images/question-mark.png" alt="" id="comp">
+                        <p style="margin: 0; color: #B4B1B1; font-size: 32px;">Computer</p>
+                    </div>
+                </div>
+                <button id="startBtn" onclick={startGame()}>Start</button>
+            </div>
+        </div>
+
+    </div>
+    <script src="./JS/main.js"></script>
 </body>
 
 </html>
